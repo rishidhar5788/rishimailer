@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # specifying ruby version
-ruby '2.3.4'
+ruby '2.4.0'
 # Using sendgrid to send email
 gem 'sendgrid-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
