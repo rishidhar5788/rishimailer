@@ -1,2 +1,0 @@
-module EmailControllerHelper
-end
