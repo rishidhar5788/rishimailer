@@ -26,7 +26,7 @@ class EmailController < ApplicationController
 		    }
 		  ]
 		}')
-		sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'].to_s)
+		sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
 		response = sg.client.mail._("send").post(request_body: data.to_s)
 		p response
 		p response.status_code
