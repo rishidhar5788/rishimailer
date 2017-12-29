@@ -16,7 +16,7 @@ class EmailController < ApplicationController
 	  puts mail.to_json
 
 		sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-		response = sg.client.mail._("send").post(request_body: data)
+		response = sg.client.mail._("send").post(request_body: mail.to_json)
 		p response.status_code
 		p response.body
 		p response.headers
