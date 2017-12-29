@@ -19,7 +19,7 @@ class EmailController < ApplicationController
 	  content = Content.new(type: 'text/plain', value: params["body"])
 	  mail = Mail.new(from, subject, to, content)
 
-		if params[:to] != nil
+		if !params[:to].empty?
 			sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
 		else
 			response = sg.client.mail._("send").post(request_body: mail.to_json)
