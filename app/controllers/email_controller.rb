@@ -31,7 +31,12 @@ class EmailController < ApplicationController
 				p response.body
 				p response.headers
 			else
-				render json: {error: "No to address specified"}
+				render json: {
+					ERROR: {
+						status_code: response.status_code,
+						error: response.body
+						}
+					}
 			end
 		rescue Exception => e
 			p "Something went wrong with the send, trying to resend email again in 5 mins" + e.to_s
