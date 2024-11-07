@@ -8,7 +8,7 @@ end
 # specifying ruby version
 ruby '2.4.0'
 # Using sendgrid to send email
-gem 'sendgrid-ruby'
+gem 'sendgrid-ruby', '>= 6.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use pg as the database for Active Record
